@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Contrail One", sans-serif;
+    font-family: "Scheherazade New", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index:999 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.navi a{
+    font-size: 1.4em;
+    font-weight: 400;
+    text-decoration: none;
+    color: #067173;
+    align-items: center;
+    float:right;
+    padding-right: 3em;
+   
+}
+.alone{
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+   text-decoration: none;
+   color: #067173;
+}
+.navi a:hover{
+    color: turquoise;
+}
+
+.fa{
+    text-decoration: none;
+    padding: 1.0vh;
+    margin-top: 5vh;
+    font-size: 2.4em;
+    color: turquoise;
+    position: relative;
+    margin-left: 4vw;
+  
+    
+}
+.fa:hover{
+    box-shadow: 0 0.4rem 1.4rem 0.5rem rgba(86, 185, 235, 0.5);
+    transform: translatey(0.4rem);
+}
+.me{
+    padding: 100px;
+    background-color:#030327;
+    color: white;
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.me h2{
+    font-size: 2em;
+}
+.me h2 span{
+    font-size: 2.4em;
+    color: turquoise;
+    font-family: 'Cairo', sans-serif;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: #067173;
+    font-size: 2.8vw;
+    font-weight: 800;
+    font-family: 'Cairo', sans-serif;
+    margin: 1.5em;
+    
+} 
+.card1{
+    box-shadow: 0 5px 25px #067173;
+    text-align: center;
+    border-radius: 1.5em;
+    padding: 20px;
+    width: 25vw;
+    
+    font-family: 'Cairo', sans-serif;
+}
+.card2{
+    text-align: center;
+    box-shadow: 0 5px 25px #067173;
+    border-radius: 1.5em;
+    padding: 20px;
+    width: 25vw;
+    
+    font-family: 'Cairo', sans-serif;
+}
+.fa-code{
+    color: #067173;
+    
+}
+.fa-microchip{
+   color: #067173;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    transition: 0.7s;
+} 
+.cards p{
+    font-size: 1.4vw;
+}
+.cards:hover{
+    transform: scale(1.1);
+    
+}
+.projects{
+    background-color:#030327;
+    align-items: center;
+    width: 100%;
+    margin-top: 3em;
+    height: 75vh;
+}
+.p1{
+   width: 35vw;
+   height: 40vh;
+   border-radius: 1em;
+   border-color: turquoise;
+   margin-left: 7vw;
+   display:inline;
+  
+}
+.p1:hover{
+    box-shadow: 0 0.4rem 1.4rem 0.5rem rgba(86, 185, 235, 0.5);
+    transform: translatey(0.4rem);
+}
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media(max-width:1023px){
+    header{
+        padding: 5px 15px;
+    }
+    .alone{
+        font-size: 1.0em;
+        margin: 0%;
+        padding: 0%;
+    }
+    .me{
+        padding: 3em;
+        background-image:url(me2.png) ;
+        color: white;
+        width: 100%;
+        min-width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+   
+    .navi a{
+        font-size: 1em;
+        font-weight: 500;
+        text-decoration: none;
+        color: #067173;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2.5em;
+        box-sizing: border-box;
+        padding: 0em;
+    }
+    
+        .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #067173;
+    font-size: 2.5em;
+    font-weight: 800;
+    font-family: 'Cairo', sans-serif;
+    margin: 1.5em;
+    }
+    .card1{
+        width: 85vw;
+        margin-left: 2em;
+        
+    }
+    .card2{
+        width: 85vw;
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .card1 h2{
+      font-size: 1em;
+    }
+    .card2 h2{
+        font-size: 1em;
+    }
+    .card1 p{
+        font-size: 1em;
+      }
+      .card2 p{
+          font-size: 1em;
+      }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        transition: 0.7s;
+    } 
+}

@@ -77,6 +77,21 @@ header{
     font-size: 2.4em;
     color: turquoise;
     font-family: 'Cairo', sans-serif;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid turquoise;
+    width: 0;
+    animation: typing 2.5s steps(16, end) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 15ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .title{
@@ -95,7 +110,6 @@ header{
     border-radius: 1.5em;
     padding: 20px;
     width: 25vw;
-    
     font-family: 'Cairo', sans-serif;
 }
 .card2{
@@ -104,7 +118,6 @@ header{
     border-radius: 1.5em;
     padding: 20px;
     width: 25vw;
-    
     font-family: 'Cairo', sans-serif;
 }
 .fa-code{
@@ -132,27 +145,108 @@ header{
     background-color:#030327;
     align-items: center;
     width: 100%;
+    max-width: 100%;
     margin-top: 3em;
-    height: 75vh;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em 0;
+}
+.pcards{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1.5em 2em;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: turquoise rgba(3, 3, 39, 0.5);
+}
+.pcards::-webkit-scrollbar {
+    height: 8px;
+}
+.pcards::-webkit-scrollbar-track {
+    background: #030327;
+}
+.pcards::-webkit-scrollbar-thumb {
+    background: turquoise;
+    border-radius: 4px;
+}
+.pcards::-webkit-scrollbar-thumb:hover {
+    background: #067173;
+}
+.pcard{
+    flex-shrink: 0;
+    padding: 1em;
+    border: solid rgba(86, 185, 235, 0.5) 3px;
+    border-radius: 1em;
+    transition: 0.5s;
 }
 .p1{
    width: 35vw;
-   height: 40vh;
+   height: 35vh;
+   min-width: 280px;
+   object-fit: fill;
    border-radius: 1em;
-   border-color: turquoise;
-   margin-left: 7vw;
-   display:inline;
-  
+   display: block;
 }
-.p1:hover{
+.pcard:hover{
     box-shadow: 0 0.4rem 1.4rem 0.5rem rgba(86, 185, 235, 0.5);
-    transform: translatey(0.4rem);
+    transform: translateY(0.4rem);
 }
 .contact{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+.ccards{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    transition: 0.7s;
+}
+.ccards:hover{
+    transform: scale(1.1);
+}
+.cardd1{
+    box-shadow: 0 5px 25px #067173;
+    text-align: center;
+    border-radius: 1.5em;
+    padding: 20px;
+    width: 25vw;
+    font-family: 'Cairo', sans-serif;
+}
+.cardd2{
+    text-align: center;
+    box-shadow: 0 5px 25px #067173;
+    border-radius: 1.5em;
+    padding: 20px;
+    width: 25vw;
+    font-family: 'Cairo', sans-serif;
+}
+.cardd1 h3, .cardd2 h3{
+    font-size: 1.4em;
+    color: #067173;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+.cardd1 h2, .cardd2 h2{
+    font-size: 1.3vw;
+    word-break: break-word;
+}
+.fa-phone, .fa-envelope{
+    color: #067173;
 }
 @media(max-width:1023px){
     header{
@@ -231,4 +325,34 @@ header{
         flex-wrap:wrap;
         transition: 0.7s;
     } 
+    .ccards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        transition: 0.7s;
+        align-items: center;
+    }
+    .cardd1{
+        width: 85vw;
+        margin-left: 2em;
+    }
+    .cardd2{
+        width: 85vw;
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+    .cardd1 h2, .cardd2 h2{
+        font-size: 1em;
+    }
+    .cardd1 h3, .cardd2 h3{
+        font-size: 1.2em;
+    }
+    .pcards{
+        padding: 1em;
+    }
+    .p1{
+        width: 70vw;
+        height: 30vh;
+        min-width: 240px;
+    }
 }
